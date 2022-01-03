@@ -8,7 +8,7 @@ const Nav = () => {
         <div className="navbar__container">
           <ul className="navbar__left">
             <div className="navbar__left-logo">
-              <img src="./portfolio/public/images/2Asset%201.png" alt="logo" />
+              <img src="/portfolio/public/images/2Asset%201.png" alt="logo" />
             </div>
           </ul>
           {state ? (
