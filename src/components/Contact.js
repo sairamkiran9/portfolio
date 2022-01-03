@@ -13,7 +13,7 @@ const Contact = () => {
       <div className="container">
         <div className="contactSection">
           <div className="contactSection-logo">
-            <img src="/images/2Asset 1.png" alt="" />
+            <img src="/portfolio/public/images/logo.png" alt="" />
           </div>
           <div className="row">
             <div className="col-6">
