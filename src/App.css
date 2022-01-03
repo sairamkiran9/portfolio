@@ -51,7 +51,7 @@ body {
 
 .navbar__right li a:hover {
   text-decoration: none;
-  color: #4a9eff;
+  color: #2f56aa;
   font-weight: 500;
   font-size: 18px;
   padding: 0 15px;
@@ -139,46 +139,25 @@ body {
   line-height: 40px;
   margin-bottom: 50px;
 }
-
-.btn {
-  outline: none;
-  border: none;
-  color: #fff;
-  text-decoration: none;
-}
-.btn-outline {
-  border: 2px solid #4a9eff;
-  border-radius: 50px;
-  padding: 13px 40px;
-}
-.btn-smart {
-  background: #4a9eff;
-  padding: 13px 40px;
-  border-radius: 50px;
-}
 .banner__img {
   /* margin-top: 20%; */
   margin: 15%;
 }
-
 .banner__img img {
   width: 600px;
   height: 600px;
 }
-
 /* Servives */
 .projects {
   background: #1f20203b;
   padding: 100px 0;
   color: #fff;
 }
-
 .common {
   width: 33.33333333333333%;
   margin: 20px auto;
   text-align: center;
 }
-
 .heading {
   margin-bottom: 20px;
   font-weight: 500;
@@ -192,7 +171,7 @@ body {
 }
 .mainContent {
   font-size: 16px;
-  color: #dfdfdf;
+  color: #fdfbfb;
 }
 .commonBorder {
   background: #4a9eff;
@@ -215,7 +194,11 @@ body {
   transition: all 0.5s linear;
 }
 .projects__box:hover {
-  background: #4a9eff;
+  background: #fff;
+  color: #4a9eff;
+}
+.projects__box:hover .commonBorder{
+  color: #fff;
 }
 .commonIcons {
   font-size: 40px;
@@ -223,7 +206,8 @@ body {
   margin-bottom: 15px;
 }
 .projects__box:hover .commonIcons {
-  color: #fff;
+  /* background: #fff; */
+  color: #4a9eff;
 }
 .projects__box-header {
   font-size: 20px;
@@ -232,7 +216,7 @@ body {
 }
 .projects__box-p {
   font-size: 14px;
-  color: #dfdfdf;
+  /* color: #fdfbfb; */
 }
 .wordcloud {
   margin-left: 20%;
@@ -262,18 +246,18 @@ body {
 }
 .skills-h2 {
   font-size: 18px;
-  color: #dfdfdf;
+  color: #fdfbfb;
 }
 .skills-p {
   font-size: 16px;
-  color: #dfdfdf;
+  color: #fdfbfb;
   margin-bottom: 10px;
 }
 .skills-section {
   margin: auto 10px;
 }
 .skills-header {
-  color: #dfdfdf;
+  color: #fdfbfb;
   font-size: 18px;
   font-weight: 500;
   margin-top: 10px;
@@ -314,7 +298,7 @@ body {
   height: 600px;
 }
 .about__info {
-  color: #dfdfdf;
+  color: #fdfbfb;
   padding: 10px auto;
 }
 .about__info h1 {
@@ -338,10 +322,12 @@ body {
   transition: all 0.5s linear;
 }
 .about_exp:hover {
-  background: #4a9eff;
+  background: #fff;
+  color: #4a9eff;
 }
 .about_exp:hover .commonIcons {
-  color: #fff;
+  background: #fff;
+  color: #4a9eff;
 }
 .about_exp-h1 {
   font-size: 20px;
@@ -350,11 +336,11 @@ body {
 }
 .about_exp-h2 {
   font-size: 18px;
-  color: #dfdfdf;
+  /* color: #fdfbfb; */
 }
 .about_exp-p {
   font-size: 12px;
-  color: #dfdfdf;
+  /* color: #fdfbfb; */
   margin-bottom: 10px;
 }
 .awards {
@@ -375,7 +361,7 @@ body {
 }
 .description {
   font-size: 16px;
-  color: #dfdfdf;
+  /* color: #fdfbfb; */
   margin: 20px;
   text-align: center;
 }
@@ -388,11 +374,8 @@ body {
   transition: all 0.5s linear;
 }
 .awards-section:hover {
-  background: #4a9eff;
-}
-
-.awards-section .commonBorder:hover {
-  background: #dfdfdf;
+  background: #fff;
+  color: #4a9eff;
 }
 
 .work {
@@ -470,7 +453,7 @@ body {
   width: 75%;
   box-sizing: border-box;
   border-radius: 20px;
-	border: 1px solid #dfdfdf;
+	border: 1px solid #fdfbfb;
   font-size: 14px;
   padding: 10px ;
   box-shadow: inset 0px -3px 0px 0px rgba(187,187,187,0.2);
@@ -524,7 +507,7 @@ body {
 
 .final {
   margin-top: 30px;
-  color: #dfdfdf;
+  color: #fff;
 }
 
 .heart {
@@ -535,6 +518,9 @@ body {
   .container {
     width: 100%;
     padding: 0 50px;
+  }
+  .col-8 {
+    width: 100%;
   }
   .col-6 {
     width: 100%;

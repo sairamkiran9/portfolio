@@ -41,15 +41,6 @@ const Banner = () => {
                 <h1>{state.title}</h1>
                 <p className="header__section_p1">{state.subtitle}</p>
                 <p className="header__section_p2">{state.text}</p>
-                {/* <div className="header__buttons">
-                  <a href="" className="btn btn-outline">
-                    My Portfolio
-                  </a>
-                  &nbsp;&nbsp;&nbsp;
-                  <a href="" className="btn btn-smart">
-                    <FaPlay className="play" />
-                  </a>
-                </div> */}
               </div>
             </div>
           </div>
