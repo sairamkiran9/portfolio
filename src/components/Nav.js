@@ -1,5 +1,7 @@
 import React from "react";
+import logo from 'public/images/logo.png';
 import { FaAlignJustify } from "react-icons/fa";
+
 const Nav = () => {
   const [state, setState] = React.useState(true);
   return (
@@ -8,7 +10,7 @@ const Nav = () => {
         <div className="navbar__container">
           <ul className="navbar__left">
             <div className="navbar__left-logo">
-              <img src="/portfolio/images/logo.png" alt="logo" />
+              <img src={logo} alt="logo" />
             </div>
           </ul>
           {state ? (
