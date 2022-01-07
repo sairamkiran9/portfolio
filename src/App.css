@@ -12,7 +12,7 @@ body {
   width: 100%;
   height: 100vh;
   /* background: url("/public/images/bg.jpg"); */
-  background: #1f20203b;
+  background: #5757543b;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -63,7 +63,7 @@ body {
   margin: 0 auto;
 }
 /* .bgMain {
-  background: #1f20203b;
+  background: #5757543b;
 } */
 
 .h-650 {
@@ -149,7 +149,7 @@ body {
 }
 /* Servives */
 .projects {
-  background: #1f20203b;
+  background: #5757543b;
   padding: 100px 0;
   color: #fff;
 }
@@ -187,7 +187,7 @@ body {
 }
 .projects__box {
   padding: 30px;
-  background: #1f20203b;
+  background: #5757543b;
   color: #fff;
   margin: 20px;
   border-radius: 15px;
@@ -234,7 +234,7 @@ body {
 }
 .skills {
   width: 100%;
-  background: #1f20203b;
+  background: #5757543b;
   color: #fff;
   padding: 100px 0;
 }
@@ -275,7 +275,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #fff;
-  background: #1f20203b;
+  background: #5757543b;
   margin: 5px;
   transition: all 0.5s linear;
   cursor: pointer;
@@ -287,7 +287,7 @@ body {
 }
 .about {
   /* width: 100%; */
-  background: #1f20203b;
+  background: #5757543b;
   padding: 100px 0;
 }
 .about__img {
@@ -314,7 +314,7 @@ body {
 }
 .about_exp {
   padding: 30px;
-  background: #1f20203b;
+  background: #5757543b;
   border: 1px solid #4a9eff;
   border-radius: 10%;
   color: #fff;
@@ -345,7 +345,7 @@ body {
 }
 .awards {
   width: 100%;
-  background: #1f20203b;
+  background: #5757543b;
   padding: 100px 0;
   color: #fff;
 }
@@ -367,7 +367,7 @@ body {
 }
 .awards-section {
   padding: 10px;
-  background: #1f20203b;
+  background: #5757543b;
   color: #fff;
   margin: 30px;
   border-radius: 30px;
@@ -381,12 +381,12 @@ body {
 .work {
   width: 100%;
   color: #fff;
-  background: #1f20203b;
+  background: #5757543b;
   padding: 100px 0;
 }
 .contact {
   padding: 100px 0;
-  background: #1f20203b;
+  background: #5757543b;
 }
 .contactSection-logo {
   text-align: center;
@@ -399,7 +399,7 @@ body {
 .contactSection p {
   color: #fff;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 20px;
   padding: 10px;
 }
@@ -417,7 +417,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #fff;
-  background: #1f20203b;
+  background: #5757543b;
   margin: 0 10px;
   transition: all 0.5s linear;
   cursor: pointer;
@@ -479,7 +479,7 @@ body {
   align-self: start;
   padding-left: 4.5rem;
   padding-bottom: 0.5rem;
-  color: rgba(187,187,187,0.9);
+  color: #fdfbfb;
 }
 
 .form  button{
@@ -535,7 +535,7 @@ body {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    background: #1f20203b;
+    background: #5757543b;
     position: fixed;
     top: 0;
     left: 0;

@@ -50,7 +50,7 @@ const Skills = () => {
             </div> 
             <div className="col-6">
               <div className='wordcloud'>
-                {/* <WordCloud /> */}
+                <WordCloud />
               </div>
             </div> 
         </div>
