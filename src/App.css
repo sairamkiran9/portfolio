@@ -565,7 +565,7 @@ body {
     height: auto;
   }
   .tagcloud {
-    margin: 0px;
+    left: 0;
   }
   .labels li {
     display: block;
