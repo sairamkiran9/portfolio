@@ -53,7 +53,7 @@ const About = () => {
                         <li>
                           Got exposure to basics of ML and UI tools.
                         </li>
-                        <br></br>
+                        {/* <br></br> */}
                       </ul>
                     </div>
                   </div>
