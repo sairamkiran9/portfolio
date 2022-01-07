@@ -286,7 +286,7 @@ body {
   background: #4a9eff;
 }
 .about {
-  width: 100%;
+  /* width: 100%; */
   background: #1f20203b;
   padding: 100px 0;
 }
@@ -318,8 +318,9 @@ body {
   border: 1px solid #4a9eff;
   border-radius: 10%;
   color: #fff;
-  margin: 20px;
+  margin: 15px;
   transition: all 0.5s linear;
+  /* width: 100%; */
 }
 .about_exp:hover {
   background: #fff;

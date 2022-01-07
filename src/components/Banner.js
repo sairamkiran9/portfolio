@@ -3,7 +3,6 @@ import {
   FaLinkedinIn,
   FaRegEnvelope,
   FaGithub,
-  FaFacebookF,
   FaInstagram
 } from "react-icons/fa";
 const Banner = () => {
@@ -30,9 +29,6 @@ const Banner = () => {
                   </li>
                   <li>
                     <FaGithub className="headerIcon" />
-                  </li>
-                  <li>
-                    <FaFacebookF className="headerIcon" />
                   </li>
                   <li>
                     <FaInstagram className="headerIcon" />

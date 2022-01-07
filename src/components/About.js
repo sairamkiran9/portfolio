@@ -1,25 +1,9 @@
 import React from "react";
 
 const About = () => {
-  // const [header] = React.useState({
-  //   subHeader: "About Me",
-  //   text:
-  //     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy text.",
-  // });
-  // const [state] = React.useState([
-  //   { id: 1, title: "Name:", text: "Jonathan Doe" },
-  //   { id: 2, title: "Email:", text: "example@domain.com" },
-  //   { id: 3, title: "Phone:", text: "+1 023 454 345" },
-  //   { id: 4, title: "Linkedin", text: "Jonathan_123" },
-  // ]);
   return (
     <div className="about">
       <div className="container">
-        {/* <div className="common">
-          <h1 className="mainHeader">{header.subHeader}</h1>
-          <p className="mainContent">{header.text}</p>
-          <div className="commonBorder"></div>
-        </div> */}
         <div className="row">
           <div className="col-4">
             <div className="about__img">
@@ -38,16 +22,6 @@ const About = () => {
               <div className="about__info-p1">
               - Currenlty vibing with ReactJS, AWS, OCP, DOCKER and AI tools.
               </div>
-              {/* <div className="info__contacts">
-                <div className="row">
-                  {state.map((info) => (
-                    <div className="col-6">
-                      <strong>{info.title}</strong>
-                      <p>{info.text}</p>
-                    </div>
-                  ))}
-                </div>
-              </div> */}
               <div className="about_exp-common">
                 <div className="row">
                   <div className="col-6">
@@ -58,7 +32,7 @@ const About = () => {
                       <p className="about_exp-p">July 2021 - present</p>
                       <ul>
                         <li>
-                          Part of AIOps (AI driven DevOps) adaption team.
+                          Part of AIOps adaption team.
                         </li>
                         <li>
                           Responsible for technology integration, code developement and testing of CI automation products.

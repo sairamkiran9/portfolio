@@ -3,7 +3,6 @@ import {
   FaLinkedinIn,
   FaRegEnvelope,
   FaGithub,
-  FaFacebookF,
   FaInstagram
 } from "react-icons/fa";
 import Form from "./Form";
@@ -30,9 +29,6 @@ const Contact = () => {
                     </li>
                     <li>
                       <FaGithub className="contacIcon" />
-                    </li>
-                    <li>
-                      <FaFacebookF className="contacIcon" />
                     </li>
                     <li>
                       <FaInstagram className="contacIcon" />
