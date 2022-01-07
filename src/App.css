@@ -218,10 +218,7 @@ body {
   font-size: 14px;
   /* color: #fdfbfb; */
 }
-.wordcloud {
-  margin-left: 20%;
-  /* margin-top: 10%; */
-}
+
 .tagcloud {
   color: #fff;
   font-size: 18px;
@@ -568,10 +565,7 @@ body {
     height: auto;
   }
   .tagcloud {
-    margin: 0%;
-  }
-  .wordcloud {
-    margin: 0%;
+    margin: 0px;
   }
   .labels li {
     display: block;

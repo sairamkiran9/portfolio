@@ -6,19 +6,9 @@ const Skills = () => {
     <div className='skills'>
       <div className="container">
         <div className="row">
-            <div className="col-6">
+            <div className="col-8">
                 <h1 className="skills-h1">My Skills</h1>
                 <div className="commonBorder-2"></div>
-                {/* <p className="skills-p">
-                    <ul>
-                      <li>Python, Groovy, Java, Shell, Ruby, JavaScript, SQL </li>
-                      <li>AWS, OCP, Docker, Kubernetes, Jenkins</li>
-                      <li>Flask, Spring Boot, ReactJS, Terrafrom, H2O.ai</li>
-                      <li>Machine Learning, Deep Learning, NLP</li>
-                      <li>HTML, CSS</li>
-                      <li>Adobe Illustrator</li>
-                    </ul>
-                </p> */}
                 <div className='skills-section'>
                   <h3 className='skills-header'>Programming Languages</h3>
                     <ul className="labels">
@@ -48,10 +38,8 @@ const Skills = () => {
                     </ul>
                 </div>
             </div> 
-            <div className="col-6">
-              <div className='wordcloud'>
+            <div className="col-4"> 
                 <WordCloud />
-              </div>
             </div> 
         </div>
       </div>
