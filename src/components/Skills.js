@@ -4,10 +4,10 @@ import WordCloud from './WordCloud'
 const Skills = () => {
   return (
     <div className='skills'>
-      <div className="container">
+      {/* <div className="container"> */}
         <div className="row">
-            <div className="col-8">
-                <h1 className="skills-h1">My Skills</h1>
+            <h1 className="skills-h1">My Skills</h1>
+            <div className="col-8">                
                 <div className="commonBorder-2"></div>
                 <div className='skills-section'>
                   <h3 className='skills-header'>Programming Languages</h3>
@@ -41,7 +41,7 @@ const Skills = () => {
             <div className="col-4"> 
                 <WordCloud />
             </div> 
-        </div>
+        {/* </div> */}
       </div>
       
     </div>

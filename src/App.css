@@ -6,13 +6,13 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #4a9eff;
+  background-color: #ffd035;
 }
 .header {
   width: 100%;
   height: 100vh;
   /* background: url("/public/images/bg.jpg"); */
-  background: #1f20203b;
+  background: #1f202010;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -63,7 +63,7 @@ body {
   margin: 0 auto;
 }
 /* .bgMain {
-  background: #1f20203b;
+  background: #1f202010;
 } */
 
 .h-650 {
@@ -149,7 +149,7 @@ body {
 }
 /* Servives */
 .projects {
-  background: #1f20203b;
+  background: #1f202010;
   padding: 100px 0;
   color: #fff;
 }
@@ -187,7 +187,7 @@ body {
 }
 .projects__box {
   padding: 30px;
-  background: #1f20203b;
+  background: #1f202010;
   color: #fff;
   margin: 20px;
   border-radius: 15px;
@@ -230,7 +230,7 @@ body {
 }
 .skills {
   width: 100%;
-  background: #1f20203b;
+  background: #1f202010;
   color: #fff;
   padding: 100px 0;
 }
@@ -271,7 +271,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #fff;
-  background: #1f20203b;
+  background: #1f202010;
   margin: 5px;
   transition: all 0.5s linear;
   cursor: pointer;
@@ -283,7 +283,7 @@ body {
 }
 .about {
   /* width: 100%; */
-  background: #1f20203b;
+  background: #1f202010;
   padding: 100px 0;
 }
 .about__img {
@@ -310,8 +310,8 @@ body {
 }
 .about_exp {
   padding: 30px;
-  background: #1f20203b;
-  border: 1px solid #4a9eff;
+  background: #1f202010;
+  /* border: 1px solid #4a9eff; */
   border-radius: 10%;
   color: #fff;
   margin: 5px;
@@ -341,7 +341,7 @@ body {
 }
 .awards {
   width: 100%;
-  background: #1f20203b;
+  background: #1f202010;
   padding: 100px 0;
   color: #fff;
 }
@@ -363,7 +363,7 @@ body {
 }
 .awards-section {
   padding: 10px;
-  background: #1f20203b;
+  background: #1f202010;
   color: #fff;
   margin: 30px;
   border-radius: 30px;
@@ -377,12 +377,12 @@ body {
 .work {
   width: 100%;
   color: #fff;
-  background: #1f20203b;
+  background: #1f202010;
   padding: 100px 0;
 }
 .contact {
   padding: 100px 0;
-  background: #1f20203b;
+  background: #1f202010;
 }
 .contactSection-logo {
   text-align: center;
@@ -413,7 +413,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #fff;
-  background: #1f20203b;
+  background: #1f202010;
   margin: 0 10px;
   transition: all 0.5s linear;
   cursor: pointer;
@@ -531,7 +531,7 @@ body {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    background: #1f20203b;
+    background: #1f202010;
     position: fixed;
     top: 0;
     left: 0;
@@ -566,6 +566,7 @@ body {
   }
   .tagcloud {
     left: 0;
+    padding: 0;
   }
   .labels li {
     display: block;
@@ -580,6 +581,9 @@ body {
   }
   .about_exp {
     width: 100%;
+  }
+  .skills {
+    padding-left: 10px;
   }
 }
 
