@@ -3,11 +3,11 @@ import React from "react";
 const About = () => {
   return (
     <div className="about">
-      <div className="container">
+      {/* <div className="container"> */}
         <div className="row">
           <div className="col-4">
             <div className="about__img">
-              <img src="/portfolio/images/nobita-no-bg.png" alt="man" />
+              <img src="/portfolio/images/symbiote-1.png" alt="man" />
             </div>
           </div>
           <div className="col-8">
@@ -63,7 +63,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

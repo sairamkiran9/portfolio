@@ -11,7 +11,7 @@ const Banner = () => {
     subtitle: "Software developer, AI enthusiast.",
     text:
       "I love creating illustrations, exploring DevOps related stuff, cloud technlogies and AI blogs.​",
-    image: "/portfolio/images/Gojo-no-bg.png",
+    image: "/portfolio/images/symbiote-2.png",
   });
   return (
     <header className="header">

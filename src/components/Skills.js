@@ -5,10 +5,11 @@ const Skills = () => {
   return (
     <div className='skills'>
       {/* <div className="container"> */}
-        <div className="row">
-            <h1 className="skills-h1">My Skills</h1>
-            <div className="col-8">                
-                <div className="commonBorder-2"></div>
+      <h1 className="skills-h1">My Skills</h1>               
+      <div className="commonBorder-2"></div>
+        <div className="row"> 
+            <div className="col-8">         
+              {/* <div className="skills-content">     */}
                 <div className='skills-section'>
                   <h3 className='skills-header'>Programming Languages</h3>
                     <ul className="labels">
@@ -37,7 +38,8 @@ const Skills = () => {
                       <li>Illustrator</li>
                     </ul>
                 </div>
-            </div> 
+              {/* </div>  */}
+            </div>
             <div className="col-4"> 
                 <WordCloud />
             </div> 

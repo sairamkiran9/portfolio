@@ -6,7 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #ffd035;
+  background-color: #000;
 }
 .header {
   width: 100%;
@@ -22,7 +22,7 @@ body {
   height: 80px;
   position: fixed;
   top: 0;
-  /* background: #4a9eff; */
+  /* background: #2a71a7; */
   z-index: 1;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
@@ -51,7 +51,7 @@ body {
 
 .navbar__right li a:hover {
   text-decoration: none;
-  color: #2f56aa;
+  color: #2a71a7;
   font-weight: 500;
   font-size: 18px;
   padding: 0 15px;
@@ -109,7 +109,7 @@ body {
 .header__ul li {
   width: 50px;
   height: 50px;
-  border: 2px solid #4a9eff;
+  border: 2px solid #2a71a7;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -123,7 +123,7 @@ body {
   border: 2px solid transparent;
 }
 .header__ul li:hover .headerIcon {
-  color: #4a9eff;
+  color: #2a71a7;
 }
 .header__ul li:first-child {
   margin-left: 0;
@@ -141,11 +141,11 @@ body {
 }
 .banner__img {
   /* margin-top: 20%; */
-  margin: 15%;
+  margin-left: 35%;
 }
 .banner__img img {
-  width: 600px;
-  height: 600px;
+  /* width: 250px; */
+  height: 500px;
 }
 /* Servives */
 .projects {
@@ -161,7 +161,7 @@ body {
 .heading {
   margin-bottom: 20px;
   font-weight: 500;
-  color: #4a9eff;
+  color: #2a71a7;
   font-size: 16px;
 }
 .mainHeader {
@@ -174,16 +174,17 @@ body {
   color: #fdfbfb;
 }
 .commonBorder {
-  background: #4a9eff;
+  background: #2a71a7;
   height: 3px;
   width: 100px;
   margin: 20px auto;
 }
 .commonBorder-2 {
-  background: #4a9eff;
+  background: #2a71a7;
   height: 3px;
   width: 100px;
-  margin-bottom:10px;
+  margin-bottom:5px;
+  margin-left: 20px;
 }
 .projects__box {
   padding: 30px;
@@ -195,19 +196,19 @@ body {
 }
 .projects__box:hover {
   background: #fff;
-  color: #4a9eff;
+  color: #2a71a7;
 }
 .projects__box:hover .commonBorder{
   color: #fff;
 }
 .commonIcons {
   font-size: 40px;
-  color: #4a9eff;
+  color: #2a71a7;
   margin-bottom: 15px;
 }
 .projects__box:hover .commonIcons {
   /* background: #fff; */
-  color: #4a9eff;
+  color: #2a71a7;
 }
 .projects__box-header {
   font-size: 20px;
@@ -226,7 +227,7 @@ body {
   z-index: 0;
 }
 .tagcloud--item:hover {
-  color: #202a38;
+  color: #2a71a7;
 }
 .skills {
   width: 100%;
@@ -239,6 +240,7 @@ body {
   color: #fff;
   font-weight: 800;
   margin-bottom: 10px;
+  padding: 10px 20px;
 }
 .skills-h2 {
   font-size: 18px;
@@ -250,7 +252,8 @@ body {
   margin-bottom: 10px;
 }
 .skills-section {
-  margin: auto 10px;
+  margin: 10px;
+  padding-left: 15px;
 }
 .skills-header {
   color: #fdfbfb;
@@ -279,7 +282,7 @@ body {
   border-radius: 30px;
 }
 .labels li:hover {
-  background: #4a9eff;
+  background: #2a71a7;
 }
 .about {
   /* width: 100%; */
@@ -287,11 +290,11 @@ body {
   padding: 100px 0;
 }
 .about__img {
-  margin-left: 0;
+  margin-left: 10%;
 }
 .about__img img {
-  width: 300px;
-  height: 600px;
+  width: 400px;
+  height: 400px;
 }
 .about__info {
   color: #fdfbfb;
@@ -311,7 +314,7 @@ body {
 .about_exp {
   padding: 30px;
   background: #1f202010;
-  /* border: 1px solid #4a9eff; */
+  /* border: 1px solid #2a71a7; */
   border-radius: 10%;
   color: #fff;
   margin: 5px;
@@ -319,11 +322,11 @@ body {
 }
 .about_exp:hover {
   background: #fff;
-  color: #4a9eff;
+  color: #2a71a7;
 }
 .about_exp:hover .commonIcons {
   background: #fff;
-  color: #4a9eff;
+  color: #2a71a7;
 }
 .about_exp-h1 {
   font-size: 20px;
@@ -371,7 +374,7 @@ body {
 }
 .awards-section:hover {
   background: #fff;
-  color: #4a9eff;
+  color: #2a71a7;
 }
 
 .work {
@@ -417,11 +420,11 @@ body {
   margin: 0 10px;
   transition: all 0.5s linear;
   cursor: pointer;
-  border: 1px #fff solid;
+  border: 1px #2a71a7 solid;
   border-radius: 50%;
 }
 .contactCircles li:hover {
-  background: #4a9eff;
+  background: #2a71a7;
 }
 .toggle {
   position: fixed;
@@ -507,7 +510,7 @@ body {
 }
 
 .heart {
-  color: #4a9eff;
+  color: #2a71a7;
 }
 
 @media (max-width: 765px) {
@@ -544,9 +547,9 @@ body {
   .toggle {
     display: flex;
   }
-  .banner__img img {
+  /* .banner__img img {
     display: none;
-  }
+  } */
   .header__section h1 {
     font-size: 35px;
     font-weight: 700;
@@ -581,6 +584,9 @@ body {
   }
   .about_exp {
     width: 100%;
+  }
+  .about__img {
+    margin-left: 5%;
   }
   .skills {
     padding-left: 10px;
