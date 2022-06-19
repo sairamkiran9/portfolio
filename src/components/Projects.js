@@ -54,7 +54,7 @@ const Projects = () => {
     // },
   ]);
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
       <div className="container">
         <div className="projects__header">
           <div className="common">
