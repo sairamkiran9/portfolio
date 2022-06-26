@@ -26,6 +26,25 @@ const Awards = () => {
                     </div>
                 </div>
             </div>
+            <div className='row'>
+                <div className='col-6'>
+                    <div className='awards-section'>
+                        <h1 className='title'>HACK-THE-NEED</h1>
+                        <div className="commonBorder"></div>
+                        <p className='description'> Winner of this design thinking hackathon where our team created a solution for a brainstorming problem statement.
+                </p>
+                    </div>
+                </div>
+                {/* <div className='col-6'>
+                    <div className='awards-section'>
+                        <h1 className='title'> New Tech aFactor Event </h1>
+                        <div className="commonBorder"></div>
+                        <p className='description'>
+                            Bronze visionary badge.
+                </p>
+                    </div>
+                </div> */}
+            </div>
         </div>
     )
 }
