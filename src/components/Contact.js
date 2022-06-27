@@ -3,7 +3,7 @@ import {
     FaLinkedinIn,
     FaRegEnvelope,
     FaGithub,
-    FaInstagram
+    FaStackOverflow
 } from "react-icons/fa";
 import Form from "./Form";
 const Contact = () => {
@@ -22,16 +22,16 @@ const Contact = () => {
                                 </p>
                                 <ul className="contactCircles">
                                     <li>
-                                        <FaLinkedinIn className="contacIcon" />
+                                        <a href="https://www.linkedin.com/in/kiran-muppana" target="_blank"><FaLinkedinIn className="contactIcon" /> </a>
                                     </li>
                                     <li>
-                                        <FaRegEnvelope className="contacIcon" />
+                                        <a href="mailto:kiranmuppana09@gmail.com" target="_blank"> <FaRegEnvelope className="contactIcon" /> </a>
                                     </li>
                                     <li>
-                                        <FaGithub className="contacIcon" />
+                                        <a href="https://github.com/sairamkiran9" target="_blank"> <FaGithub className="contactIcon" /> </a>
                                     </li>
                                     <li>
-                                        <FaInstagram className="contacIcon" />
+                                        <a href="https://stackoverflow.com/users/19210144/lazybug" target="_blank"> <FaStackOverflow className="contactIcon" /> </a>
                                     </li>
                                 </ul>
                                 <h1 className="final">with <span className="heart">&hearts;</span> ReactJS</h1>

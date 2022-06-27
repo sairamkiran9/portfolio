@@ -23,13 +23,13 @@ const Banner = () => {
                             <div className="header__section">
                                 <ul className="header__ul">
                                     <li>
-                                        <FaLinkedinIn className="headerIcon" />
+                                        <a href="https://www.linkedin.com/in/kiran-muppana" target="_blank"> <FaLinkedinIn className="headerIcon" /> </a>
                                     </li>
                                     <li>
-                                        <FaRegEnvelope className="headerIcon" />
+                                        <a href="mailto:kiranmuppana09@gmail.com" target="_blank"> <FaRegEnvelope className="headerIcon" /> </a>
                                     </li>
                                     <li>
-                                        <FaGithub className="headerIcon" />
+                                        <a href="https://github.com/sairamkiran9" target="_blank"> <FaGithub className="headerIcon" /> </a>
                                     </li>
                                     <li>
                                         <FaRegFileAlt className="headerIcon" />
