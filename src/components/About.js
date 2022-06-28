@@ -17,10 +17,10 @@ const About = () => {
               - Bachelor's in Electronics and Communication Engineering, NITC'21. Turned developer to get my hands dirty with the technologies.
               </div>
               <div className="about__info-p1">
-              - I like building applications, creating graphic design illustrations and going for long drives.
+              - I like talking, trying out new things, creating graphic design illustrations and long drives.
               </div>
               <div className="about__info-p1">
-              - Currenlty vibing with DevOps tools and AI.
+              - Currenlty working with MLOps and CICD automation.
               </div>
               <div className="about_exp-common">
                 <div className="row">
@@ -32,10 +32,10 @@ const About = () => {
                       <p className="about_exp-p">July 2021 - present</p>
                       <ul>
                         <li>
-                          DevOps developer in the RnD AI-Driven-DevOps(AIOps) team.
+                          Developer in the operational RnD unit, AI-Driven-DevOps team. We devlop pipelines for monitoring and detecting future anomaly with insights.
                         </li>
                         <li>
-                          Responsible for building AI pipelines, cloud technology integration, and developement CI/CD shared libraries.
+                          Responsible for building ML pipelines, cloud technology integration, and developement CI/CD shared libraries.
                         </li>
                       </ul>
                     </div>
