@@ -4,32 +4,32 @@ import TagCloud from 'TagCloud';
 const container = '.content';
 
 const texts = [
-  'Python', 'AWS', 'JavaScript',
-  'JAVA', 'Flask', 'Spring',
-  'ReactJS', 'SQL', 'CSS',
-  'Groovy', 'Shell', 'C++',
-  'HTML', 'AI',
+    'Python', 'AWS', 'JavaScript',
+    'JAVA', 'Flask', 'Spring',
+    'ReactJS', 'SQL', 'CSS',
+    'Groovy', 'Shell', 'ML',
+    'HTML', 'MLOps', 'NLP'
 ];
 
 const options = {
-  radius: 200,
-  maxSpeed: 'fast',
-  initSpeed: 'slow',
-  direction: 135,
-  keep: true
+    radius: 200,
+    maxSpeed: 'fast',
+    initSpeed: 'slow',
+    direction: 135,
+    keep: true
 };
 
 const WordCloud = () => {
 
-  useEffect(() => {
-    TagCloud(container, texts, options);
-  })
+    useEffect(() => {
+        TagCloud(container, texts, options);
+    })
 
-  return (
-    <div>
-      <span className="content"></span>
-    </div>
-  )
+    return (
+        <div>
+            <span className="content"></span>
+        </div>
+    )
 }
 
 export default WordCloud;
