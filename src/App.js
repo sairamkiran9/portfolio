@@ -15,10 +15,9 @@ function App() {
       <Banner />
       <Nav />
       <About />
-      <Projects />
       <Skills />
+      <Projects />
       <Awards />
-      {/* <Work /> */}
       <Contact />
     </div>
   );
