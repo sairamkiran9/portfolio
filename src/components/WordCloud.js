@@ -7,8 +7,8 @@ const texts = [
     'Python', 'AWS', 'JavaScript',
     'JAVA', 'Flask', 'Spring',
     'ReactJS', 'SQL', 'CSS',
-    'Groovy', 'Shell', 'C++',
-    'HTML', 'AI',
+    'Groovy', 'Shell', 'ML',
+    'HTML', 'MLOps', 'NLP'
 ];
 
 const options = {

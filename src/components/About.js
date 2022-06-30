@@ -14,13 +14,13 @@ const About = () => {
             <div className="about__info">
               <h1>About Me</h1>
               <div className="about__info-p1">
-              - Bachelor's in Electronics and Communication Engineering, NITC'21. Turned developer to get my hands dirty with the technologies.
+              - Bachelor's in Electronics and Communication Engineering, National Institute of technology - 2021.
               </div>
               <div className="about__info-p1">
               - I like talking, trying out new things, creating graphic design illustrations and long drives.
               </div>
               <div className="about__info-p1">
-              - Currenlty working with MLOps and CICD automation.
+              - Currenlty working with MLOps and CICD shared library automations.
               </div>
               <div className="about_exp-common">
                 <div className="row">
@@ -32,7 +32,7 @@ const About = () => {
                       <p className="about_exp-p">July 2021 - present</p>
                       <ul>
                         <li>
-                          Developer in the operational RnD unit, AI-Driven-DevOps team. We devlop pipelines for monitoring and detecting future anomaly with insights.
+                          Developer under the operational RnD unit, in AI-Driven-DevOps team. We devlop pipelines for monitoring and detecting future anomalies with insights.
                         </li>
                         <li>
                           Responsible for building ML pipelines, cloud technology integration, and developement CI/CD shared libraries.

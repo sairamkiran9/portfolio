@@ -35,13 +35,12 @@ const Skills = () => {
                         <h3 className='skills-header'>Other</h3>
                         <ul className="labels">
                             <li>AI</li>
-                            <li>Figma</li>
                             <li>Adobe Illustrator</li>
                         </ul>
                     </div>
                     {/* </div>  */}
                 </div>
-                <div className="col-4">
+                <div className="col-4" id="tagcloud">
                     <WordCloud />
                 </div>
                 {/* </div> */}

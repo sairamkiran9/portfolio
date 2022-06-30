@@ -224,6 +224,10 @@ a {
   /* color: #fdfbfb; */
 }
 
+#tagcloud {
+    margin-top: 5%;
+}
+
 .tagcloud {
   color: #fff;
   font-size: 18px;
@@ -605,7 +609,3 @@ a {
     padding-left: 10px;
   }
 }
-
-
-
-
