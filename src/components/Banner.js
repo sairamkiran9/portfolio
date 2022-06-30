@@ -1,54 +1,55 @@
 import React from "react";
 import {
-  FaLinkedinIn,
-  FaRegEnvelope,
-  FaGithub,
-  FaInstagram
+    FaLinkedinIn,
+    FaRegEnvelope,
+    FaGithub,
+    FaRegFileAlt
 } from "react-icons/fa";
+
 const Banner = () => {
-  const [state] = React.useState({
-    title: "Hi, I'm Kiran Muppana",
-    subtitle: "Software developer, AI enthusiast.",
-    text:
-      "I love creating illustrations, exploring DevOps related stuff, cloud technlogies and AI blogs.​",
-    image: "/portfolio/images/symbiote-2.png",
-  });
-  return (
-    <header className="header">
-      <div className="container">
-        <div className="row">
-          <div className="col-6">
-            <div className="header__content">
-              <div className="header__section">
-                <ul className="header__ul">
-                  <li>
-                    <FaLinkedinIn className="headerIcon" />
-                  </li>
-                  <li>
-                    <FaRegEnvelope className="headerIcon" />
-                  </li>
-                  <li>
-                    <FaGithub className="headerIcon" />
-                  </li>
-                  <li>
-                    <FaInstagram className="headerIcon" />
-                  </li>
-                </ul>
-                <h1>{state.title}</h1>
-                <p className="header__section_p1">{state.subtitle}</p>
-                <p className="header__section_p2">{state.text}</p>
-              </div>
+    const [state] = React.useState({
+        title: "Hi, I'm Kiran Muppana",
+        subtitle: "Infra Developer@Amdocs",
+        text:
+            "I creat applications using trending technologies, love exploring cloud and ML related things.​",
+        image: "/portfolio/images/symbiote-2.png",
+    });
+    return (
+        <header className="header" id="header">
+            <div className="container">
+                <div className="row">
+                    <div className="col-6">
+                        <div className="header__content">
+                            <div className="header__section">
+                                <ul className="header__ul">
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/kiran-muppana" target="_blank" rel="noopener"> <FaLinkedinIn className="headerIcon" /> </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:kiranmuppana09@gmail.com" target="_blank" rel="noopener"> <FaRegEnvelope className="headerIcon" /> </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/sairamkiran9" target="_blank" rel="noopener"> <FaGithub className="headerIcon" /> </a>
+                                    </li>
+                                    <li>
+                                        <FaRegFileAlt className="headerIcon" />
+                                    </li>
+                                </ul>
+                                <h1>{state.title}</h1>
+                                <p className="header__section_p1">{state.subtitle}</p>
+                                <p className="header__section_p2">{state.text}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-6">
+                        <div className="banner__img">
+                            <img src={state.image} alt="man" />
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div className="col-6">
-            <div className="banner__img">
-              <img src={state.image} alt="man" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-  );
+        </header>
+    );
 };
 
 export default Banner;
