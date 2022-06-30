@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="about">
+    <div className="about" id="about">
       {/* <div className="container"> */}
         <div className="row">
           <div className="col-4">
@@ -14,13 +14,13 @@ const About = () => {
             <div className="about__info">
               <h1>About Me</h1>
               <div className="about__info-p1">
-              - Bachelor's in Electronics and Communication Engineering, NITC'21. Turned developer to get my hands dirty with lot of technologies out there.
+              - Bachelor's in Electronics and Communication Engineering, National Institute of technology - 2021.
               </div>
               <div className="about__info-p1">
-              - I like building applications, creating graphic design illustrations and binge-watching on OTT.
+              - I like talking, trying out new things, creating graphic design illustrations and long drives.
               </div>
               <div className="about__info-p1">
-              - Currenlty vibing with ReactJS, AWS, OCP, DOCKER and AI tools.
+              - Currenlty working with MLOps and CICD shared library automations.
               </div>
               <div className="about_exp-common">
                 <div className="row">
@@ -32,10 +32,10 @@ const About = () => {
                       <p className="about_exp-p">July 2021 - present</p>
                       <ul>
                         <li>
-                          Part of AIOps adaption team.
+                          Developer under the operational RnD unit, in AI-Driven-DevOps team. We devlop pipelines for monitoring and detecting future anomalies with insights.
                         </li>
                         <li>
-                          Responsible for technology integration, code developement and testing of CI automation products.
+                          Responsible for building ML pipelines, cloud technology integration, and developement CI/CD shared libraries.
                         </li>
                       </ul>
                     </div>
@@ -48,10 +48,10 @@ const About = () => {
                       <p className="about_exp-p">June 2019 - July 2019</p>
                       <ul>
                         <li>
-                          Developed a linear regression model from scratch
+                          Developed a statistical linear regression model to forecast the impact location of the object.
                         </li>
                         <li>
-                          Got exposure to basics of ML and UI tools.
+                          Build from scratch using Python. Got exposure to basics of ML and UI tools.
                         </li>
                         {/* <br></br> */}
                       </ul>
