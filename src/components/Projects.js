@@ -36,31 +36,13 @@ const Projects = () => {
       text:
         "This ML application classifies the YouTube video based on the title and text description of the video.",
     },
-    // {
-    //   id: 5,
-    //   icon: <FaFileVideo className="commonIcons" />,
-    //   heading: "Video Editing",
-    //   text:
-    //     "Lorem Ipsum is simply dummy text of the printing typesetting\
-    //     industry. simply dummy",
-    // },
-    // {
-    //   id: 6,
-    //   icon: <FaSearchDollar className="commonIcons" />,
-    //   heading: "SEO Expert",
-    //   text:
-    //     "Lorem Ipsum is simply dummy text of the printing typesetting\
-    //     industry. simply dummy",
-    // },
   ]);
   return (
     <div className="projects" id="projects">
       <div className="container">
         <div className="projects__header">
           <div className="common">
-            {/* <h3 className="heading">{header.mainHeader}</h3> */}
             <h1 className="mainHeader">My Projects</h1>
-            {/* <p className="mainContent">{header.text}</p> */}
             <div className="commonBorder"></div>
           </div>
 

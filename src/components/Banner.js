@@ -31,8 +31,8 @@ const Banner = () => {
                                     <li>
                                         <a href="https://github.com/sairamkiran9" target="_blank" rel="noopener"> <FaGithub className="headerIcon" /> </a>
                                     </li>
-                                    <li>
-                                        <FaRegFileAlt className="headerIcon" />
+                                    <li> 
+                                    <a href="https://drive.google.com/file/d/1kr3R048Ntmo8bJogDibEeC-ORerOhLOq/view?usp=sharing" target="_blank" rel="noopener"> <FaRegFileAlt className="headerIcon" /> </a>
                                     </li>
                                 </ul>
                                 <h1>{state.title}</h1>

@@ -151,7 +151,7 @@ a {
   /* width: 250px; */
   height: 500px;
 }
-/* Servives */
+/* Projects */
 .projects {
   background: #1f202010;
   padding: 50px 0;
@@ -536,7 +536,9 @@ a {
     padding: 0 50px;
   }
   .col-8 {
-    width: 100%;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
   }
   .col-6 {
     width: 100%;
@@ -548,23 +550,24 @@ a {
     width: 100%;
   }
   .navbar__right {
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     align-items: center;
     background: #1f202010;
     position: fixed;
-    top: 0;
-    left: 0;
+    padding: 5px;
+    /* top: 10px; */
+    left:0;
   }
   .navbar__right li a {
     display: block;
-    padding: 5px 0;
+    padding: 5px;
     font-size: 16px;
   }
   .toggle {
     display: flex;
   }
-  .banner__img img {
+  .banner__img {
     display: none;
   }
   .header__section h1 {
@@ -595,17 +598,30 @@ a {
     width: 100%;
     text-align: center;
   }
+  .about {
+    padding: 0px;
+  }
   .about__info-p1 {
     margin-left: 10%;
     width: 100%;
   }
   .about_exp {
     width: 100%;
+    margin-left: 5%;
+    align-items: center;
+    justify-content: center;
   }
   .about__img {
     margin-left: 5%;
+    align-items: center;
   }
-  .skills {
+  /* .skills {
     padding-left: 10px;
+  } */
+  .contact {
+    display: none;
+  }
+  .navbar_contact {
+    display: none;
   }
 }

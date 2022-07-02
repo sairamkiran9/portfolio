@@ -31,7 +31,7 @@ const Nav = () => {
                             <li>
                                 <a href="#awards">Achievements</a>
                             </li>
-                            <li>
+                            <li className="navbar_contact">
                                 <a href="#contact">Contact</a>
                             </li>
                         </ul>
