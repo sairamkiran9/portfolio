@@ -9,16 +9,16 @@ import {
 const Banner = () => {
     const [state] = React.useState({
         title: "Hi, I'm Kiran Muppana",
-        subtitle: "Infra Developer@Amdocs",
+        subtitle: "CS grad at Florida State University",
         text:
-            "I creat applications using trending technologies, love exploring cloud and ML related things.​",
+            "I create, deploy applications with latest technologies, love exploring cloud and ML related blogs.​",
         image: "/portfolio/images/symbiote-2.png",
     });
     return (
         <header className="header" id="header">
             <div className="container">
                 <div className="row">
-                    <div className="col-6">
+                    <div className="col-6"> 
                         <div className="header__content">
                             <div className="header__section">
                                 <ul className="header__ul">
@@ -32,7 +32,7 @@ const Banner = () => {
                                         <a href="https://github.com/sairamkiran9" target="_blank" rel="noopener"> <FaGithub className="headerIcon" /> </a>
                                     </li>
                                     <li> 
-                                    <a href="https://drive.google.com/file/d/1kr3R048Ntmo8bJogDibEeC-ORerOhLOq/view?usp=sharing" target="_blank" rel="noopener"> <FaRegFileAlt className="headerIcon" /> </a>
+                                    <a href="https://drive.google.com/file/d/1JrWKx8wUj4cj3x2xJR40DW_nDTsSRc5B/view?usp=sharing" target="_blank" rel="noopener"> <FaRegFileAlt className="headerIcon" /> </a>
                                     </li>
                                 </ul>
                                 <h1>{state.title}</h1>
