@@ -76,10 +76,10 @@ export function Navigation() {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className={`px-3 py-2 rounded-lg font-medium text-sm transition-all ${
+                className={`px-3 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
                   activeSection === link.id
-                    ? 'text-[var(--color-primary)] bg-[var(--color-secondary)]'
-                    : 'text-[var(--color-text)] hover:text-[var(--color-primary)] hover:bg-[var(--color-secondary)]'
+                    ? 'text-[var(--color-primary)] bg-[var(--color-secondary)] shadow-lg scale-105 border border-[var(--color-primary)]'
+                    : 'text-[var(--color-text)] hover:text-[var(--color-primary)] hover:bg-[var(--color-secondary)] hover:shadow-lg hover:scale-105'
                 }`}
               >
                 {link.label}
@@ -87,7 +87,7 @@ export function Navigation() {
             ))}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg text-[var(--color-text)] hover:bg-[var(--color-secondary)] transition-all"
+              className="p-2 rounded-lg text-[var(--color-text)] hover:bg-[var(--color-secondary)] hover:shadow-lg hover:scale-105 transition-all duration-300"
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
@@ -97,14 +97,14 @@ export function Navigation() {
           <div className="md:hidden flex items-center gap-3">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg text-[var(--color-text)] hover:bg-[var(--color-secondary)]"
+              className="p-2 rounded-lg text-[var(--color-text)] hover:bg-[var(--color-secondary)] hover:shadow-lg hover:scale-105 transition-all duration-300"
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-[var(--color-text)]"
+              className="p-2 text-[var(--color-text)] hover:bg-[var(--color-secondary)] hover:shadow-lg hover:scale-105 rounded-lg transition-all duration-300"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -119,10 +119,10 @@ export function Navigation() {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className={`w-full max-w-xs px-6 py-3 text-center rounded-lg font-medium transition-all ${
+                  className={`w-full max-w-xs px-6 py-3 text-center rounded-lg font-medium transition-all duration-300 ${
                     activeSection === link.id
-                      ? 'text-[var(--color-primary)] bg-[var(--color-secondary)]'
-                      : 'text-[var(--color-text)] hover:bg-[var(--color-secondary)]'
+                      ? 'text-[var(--color-primary)] bg-[var(--color-secondary)] shadow-lg scale-105 border border-[var(--color-primary)]'
+                      : 'text-[var(--color-text)] hover:bg-[var(--color-secondary)] hover:shadow-lg hover:scale-105'
                   }`}
                 >
                   {link.label}

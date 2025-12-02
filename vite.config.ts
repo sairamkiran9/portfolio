@@ -7,4 +7,9 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  server: {
+    watch: {
+      usePolling: true, // Enable this if on WSL or Docker
+    },
+  },
 });

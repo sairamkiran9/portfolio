@@ -1,9 +1,32 @@
+import { useEffect, useRef } from 'react';
 import { projects } from '../data/projects';
 import type { Project } from '../types';
 
 function ProjectCard({ project }: { project: Project }) {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className={`project-card ${project.isFeatured ? 'featured' : ''}`}>
+    <div ref={cardRef} className={`project-card ${project.isFeatured ? 'featured' : ''}`}>
       <div className="project-header">
         <h3>{project.title}</h3>
         <span className="project-subtitle">{project.subtitle}</span>

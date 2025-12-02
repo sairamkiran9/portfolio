@@ -1069,7 +1069,8 @@ section {
 
 .project-card.featured {
   border: 2px solid var(--color-primary);
-  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-bg-1) 100%);
+  background: var(--color-surface);
+  box-shadow: 0 0 0 1px rgba(var(--color-primary-rgb, var(--color-teal-500-rgb)), 0.1), var(--shadow-md);
 }
 
 .project-header {
@@ -1137,9 +1138,9 @@ section {
   gap: var(--space-16);
   margin-bottom: var(--space-24);
   padding: var(--space-16);
-  background: rgba(var(--color-primary-rgb, var(--color-teal-500-rgb)), 0.05);
+  background: rgba(var(--color-primary-rgb, var(--color-teal-500-rgb)), 0.1);
   border-radius: var(--radius-base);
-  border: 1px solid rgba(var(--color-primary-rgb, var(--color-teal-500-rgb)), 0.1);
+  border: 1px solid rgba(var(--color-primary-rgb, var(--color-teal-500-rgb)), 0.2);
 }
 
 .metric-item {
@@ -1206,7 +1207,7 @@ section {
 
 .tech-tag {
   background: var(--color-primary);
-  color: var(--color-btn-primary-text);
+  color: #FFFFFF;
   padding: var(--space-4) var(--space-10);
   border-radius: var(--radius-base);
   font-size: var(--font-size-xs);

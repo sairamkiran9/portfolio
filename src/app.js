@@ -515,15 +515,6 @@ style.textContent = `
 
 document.head.appendChild(style);
 
-// Console message for developers
-console.log(`
-🚀 Portfolio loaded successfully!
-💼 Kiran Muppana - AI Platform Engineer & Distributed Systems Architect
-📧 Contact: kiranmuppana36@gmail.com
-🔧 Built with vanilla HTML, CSS, and JavaScript
-✨ Featured Projects Section Active
-`);
-
 // Analytics placeholder (for future implementation)
 function trackEvent(eventName, properties = {}) {
     // Placeholder for analytics tracking
