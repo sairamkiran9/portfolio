@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, memo, useCallback } from 'react';
+import { EncryptedText } from './components/ui/encrypted-text';
 import { 
   Github, 
   Linkedin, 
@@ -478,7 +479,7 @@ const SkillRadarChart = ({ isDark }: { isDark: boolean }) => {
   return (
     <div className={`relative flex flex-col items-center justify-center p-6 rounded-sm backdrop-blur-sm border transition-colors duration-500 w-full max-w-[300px] h-auto aspect-square mx-auto lg:mx-0 ${colors.bg}`}>
       <div className={`absolute top-4 right-4 text-[10px] font-mono uppercase tracking-widest animate-pulse ${colors.liveText}`}>
-        Skill Proficiency Distribution
+        Fast Learner | Team Player
       </div>
       <svg viewBox={`0 0 ${size} ${size}`} className="overflow-visible w-full h-full">
         {[20, 40, 60, 80, 100].map((level, idx) => (
@@ -513,7 +514,7 @@ const SkillRadarChart = ({ isDark }: { isDark: boolean }) => {
         })}
       </svg>
       <div className={`mt-4 text-xs font-mono transition-colors ${isDark ? 'text-neutral-500' : 'text-slate-400'}`}>
-        Fast Learner | Team Player
+        Skill Proficiency Distribution
       </div>
     </div>
   );
@@ -523,7 +524,7 @@ export default function Portfolio() {
   const [activeTab, setActiveTab] = useState('All');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -626,7 +627,14 @@ export default function Portfolio() {
             <div className="space-y-6 md:space-y-8">
               <h1 className={`text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1] md:leading-[0.95] ${theme.heading}`}>
                 Software Engineer. <br />
-                <span className={`${isDark ? 'text-neutral-600' : 'text-slate-400'}`}>AI/ML Backend</span>
+                <span className={`${isDark ? 'text-neutral-600' : 'text-slate-400'}`}>
+                  <EncryptedText 
+                    text="AI/ML Backend"
+                    encryptedClassName="text-neutral-500"
+                    revealedClassName={isDark ? 'text-neutral-600' : 'text-slate-400'}
+                    revealDelayMs={50}
+                  />
+                </span>
               </h1>
               <div className={`relative border-l-2 pl-6 md:pl-8 py-2 ${theme.accentBorder}`}>
                 <p className={`text-xl md:text-2xl font-medium italic mb-4 ${theme.subHeading}`}>
