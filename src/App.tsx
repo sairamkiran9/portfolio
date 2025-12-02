@@ -422,17 +422,17 @@ const SKILL_CATEGORIES = [
   {
     title: "AI & Machine Learning",
     icon: Brain,
-    skills: ["PyTorch", "LangChain", "LangGraph", "LlamaIndex", "AWS SageMaker", "RAG Systems", "Hugging Face"]
+    skills: ["PyTorch", "LangChain", "LangGraph", "LlamaIndex", "AWS SageMaker", "Vector Databases", "RAG", "Hugging Face"]
   },
   {
     title: "Cloud & Infrastructure",
     icon: Cloud,
-    skills: ["AWS (ECS, Lambda, Kinesis)", "Kubernetes", "Terraform", "Docker", "Jenkins", "GitHub Actions"]
+    skills: ["AWS (ECS, Lambda, Kinesis)", "Kubernetes", "Terraform", "Docker", "Jenkins", "GitHub Actions", "Observability"]
   },
   {
     title: "Data & Distributed Systems",
     icon: Database,
-    skills: ["Apache Kafka", "Spark / PySpark", "PostgreSQL", "Redis", "MongoDB", "gRPC", "GraphQL"]
+    skills: ["Apache Kafka", "Spark / PySpark", "PostgreSQL", "Redis", "MongoDB", "gRPC", "Supabase"]
   }
 ];
 
@@ -478,7 +478,7 @@ const SkillRadarChart = ({ isDark }: { isDark: boolean }) => {
   return (
     <div className={`relative flex flex-col items-center justify-center p-6 rounded-sm backdrop-blur-sm border transition-colors duration-500 w-full max-w-[300px] h-auto aspect-square mx-auto lg:mx-0 ${colors.bg}`}>
       <div className={`absolute top-4 right-4 text-[10px] font-mono uppercase tracking-widest animate-pulse ${colors.liveText}`}>
-        Live Metrics
+        Skill Proficiency Distribution
       </div>
       <svg viewBox={`0 0 ${size} ${size}`} className="overflow-visible w-full h-full">
         {[20, 40, 60, 80, 100].map((level, idx) => (
@@ -513,7 +513,7 @@ const SkillRadarChart = ({ isDark }: { isDark: boolean }) => {
         })}
       </svg>
       <div className={`mt-4 text-xs font-mono transition-colors ${isDark ? 'text-neutral-500' : 'text-slate-400'}`}>
-        Skill Proficiency Distribution
+        Fast Learner | Team Player
       </div>
     </div>
   );
@@ -591,7 +591,7 @@ export default function Portfolio() {
             <a href="#work" className={`transition-colors ${theme.accentTextHover}`}>Work</a>
             <a href="#experience" className={`transition-colors ${theme.accentTextHover}`}>Experience</a>
             <a href="#contact" className={`transition-colors ${theme.accentTextHover}`}>Contact</a>
-            <a href="#" className={`flex items-center gap-2 border px-4 py-1.5 rounded-sm transition-colors ${theme.accentBorderHover} ${isDark ? 'bg-neutral-900/50 border-neutral-800 text-stone-300' : 'bg-white border-slate-200 text-slate-600'}`}>
+            <a href="/resume.pdf" download="Kiran_Muppana_Resume.pdf" className={`flex items-center gap-2 border px-4 py-1.5 rounded-sm transition-colors ${theme.accentBorderHover} ${isDark ? 'bg-neutral-900/50 border-neutral-800 text-stone-300' : 'bg-white border-slate-200 text-slate-600'}`}>
               Resume <Download size={12} />
             </a>
           </div>
@@ -606,7 +606,7 @@ export default function Portfolio() {
             <a href="#work" onClick={() => setMobileMenuOpen(false)}>Work</a>
             <a href="#experience" onClick={() => setMobileMenuOpen(false)}>Experience</a>
             <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-            <a href="#" className={theme.accentText}>Download Resume</a>
+            <a href="/resume.pdf" download="Kiran_Muppana_Resume.pdf" className={theme.accentText}>Download Resume</a>
           </div>
         )}
       </nav>
@@ -626,7 +626,7 @@ export default function Portfolio() {
             <div className="space-y-6 md:space-y-8">
               <h1 className={`text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1] md:leading-[0.95] ${theme.heading}`}>
                 Software Engineer. <br />
-                <span className={`${isDark ? 'text-neutral-600' : 'text-slate-400'}`}>System Architect.</span>
+                <span className={`${isDark ? 'text-neutral-600' : 'text-slate-400'}`}>AI/ML Backend</span>
               </h1>
               <div className={`relative border-l-2 pl-6 md:pl-8 py-2 ${theme.accentBorder}`}>
                 <p className={`text-xl md:text-2xl font-medium italic mb-4 ${theme.subHeading}`}>
@@ -706,7 +706,7 @@ export default function Portfolio() {
                  High-impact systems, from ML recommendation engines to distributed backend services.
                </p>
             </div>
-            <div className={`flex flex-wrap gap-1 p-1 rounded-sm border ${isDark ? 'bg-neutral-900/50 border-neutral-800' : 'bg-slate-100 border-slate-200'}`}>
+            {/* <div className={`flex flex-wrap gap-1 p-1 rounded-sm border ${isDark ? 'bg-neutral-900/50 border-neutral-800' : 'bg-slate-100 border-slate-200'}`}>
               {['All', 'ML/AI', 'Backend', 'DevOps'].map((cat) => (
                 <button
                   key={cat}
@@ -720,7 +720,7 @@ export default function Portfolio() {
                   {cat}
                 </button>
               ))}
-            </div>
+            </div> */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
@@ -820,7 +820,7 @@ export default function Portfolio() {
               <p className={`${theme.muted} text-sm leading-relaxed mb-8`}>
                 Solving scalability problems and optimizing critical paths in production environments.
               </p>
-              <a href="#" className={`inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest border px-4 py-3 rounded-sm transition-colors w-fit ${theme.subHeading} ${theme.borderStrong} ${theme.accentBorderHover} ${theme.accentTextHover}`}>
+              <a href="/resume.pdf" download="Kiran_Muppana_Resume.pdf" className={`inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest border px-4 py-3 rounded-sm transition-colors w-fit ${theme.subHeading} ${theme.borderStrong} ${theme.accentBorderHover} ${theme.accentTextHover}`}>
                 Download Full Resume <Download size={14} />
               </a>
             </div>
