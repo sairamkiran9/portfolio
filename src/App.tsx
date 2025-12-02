@@ -245,8 +245,8 @@ const RESUME_DATA = {
   role: "Software Engineer",
   contact: {
     email: "kiranmuppana36@gmail.com",
-    github: "#",
-    linkedin: "#"
+    github: "https://github.com/sairamkiran9",
+    linkedin: "https://www.linkedin.com/in/kiranmuppana9/"
   },
   experience: [
     {
