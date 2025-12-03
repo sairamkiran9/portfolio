@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef, memo, useCallback } from 'react';
 import { EncryptedText } from './components/ui/encrypted-text';
-import { 
-  Github, 
-  Linkedin, 
-  Mail, 
-  ArrowUpRight, 
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ArrowUpRight,
   Download,
   Terminal,
   Code2,
@@ -38,16 +38,16 @@ function cn(...classes: (string | undefined | null | false)[]) {
 const simpleAnimate = (from: number, to: number, options: { duration: number, onUpdate: (val: number) => void }) => {
   const start = performance.now();
   const durationMs = options.duration * 1000;
-  
+
   const frame = (time: number) => {
     const elapsed = time - start;
     const progress = Math.min(elapsed / durationMs, 1);
     // Ease Out Cubic
     const ease = 1 - Math.pow(1 - progress, 3);
-    
+
     const current = from + (to - from) * ease;
     options.onUpdate(current);
-    
+
     if (progress < 1) {
       requestAnimationFrame(frame);
     }
@@ -136,7 +136,7 @@ const GlowingEffect = memo(
             parseFloat(element.style.getPropertyValue("--start")) || 0;
           let targetAngle =
             (180 * Math.atan2(mouseY - center[1], mouseX - center[0])) /
-              Math.PI +
+            Math.PI +
             90;
 
           const angleDiff = ((targetAngle - currentAngle + 180) % 360) - 180;
@@ -288,6 +288,31 @@ const RESUME_DATA = {
   ],
   projects: [
     {
+      id: 'knowledgeGraph',
+      title: 'Knowledge Graph',
+      subtitle: 'Search engine powered by LLM similarity indexing',
+      category: 'ML/AI',
+      status: 'production',
+      statusLabel: 'Production Ready',
+      description: 'End to end knowledge retrieval platform with automated crawling, entity extraction, vector indexing, and an integrated RAG chat assistant. Supports large scale ingestion and real time semantic search.',
+      metrics: [
+        { value: '$550K', label: 'NSF Funding' },
+        { value: '50M plus Records', label: 'Dataset Size' },
+        { value: 'Published', label: 'Research Paper' },
+      ],
+      features: [
+        'Automated web crawling and data normalization',
+        'Dynamic entity clustering and graph construction',
+        'LLM based similarity search and ranking',
+        'Integrated RAG chat interface on AWS cloud',
+      ],
+      technologies: ['Next.js 14', 'FastAPI', 'MongoDB', 'LLMs', 'AWS EC2'],
+      links: [
+        { text: 'Research Paper', url: 'https://arxiv.org/abs/2501.00223', isPrimary: false },
+        { text: 'Conference', url: 'https://dl.acm.org/doi/10.1145/3627673.3680094', isPrimary: false },
+      ],
+    },
+    {
       id: 'whiteboard-ai',
       title: 'Whiteboard.ai',
       subtitle: 'AI-Powered System Design Copilot',
@@ -313,38 +338,13 @@ const RESUME_DATA = {
       isFeatured: true,
     },
     {
-      id: 'atomic-habits-agent',
-      title: 'Atomic Habits Agent',
-      subtitle: 'Full-Stack Habit Tracking with AI',
-      category: 'Backend',
-      status: 'production',
-      statusLabel: 'Production Ready',
-      description: 'Comprehensive habit tracking application inspired by James Clear\'s Atomic Habits, featuring intelligent recommendations.',
-      metrics: [
-        { value: 'Full-Stack', label: 'Architecture' },
-        { value: 'JWT', label: 'Authentication' },
-        { value: 'RAG', label: 'AI Integration' },
-      ],
-      features: [
-        'Smart streak tracking',
-        'Categorized habit management',
-        'Responsive dark/light mode UI',
-        'Secure JWT authentication',
-      ],
-      technologies: ['Next.js 14', 'FastAPI', 'SQLAlchemy', 'JWT', 'Tailwind CSS'],
-      links: [
-        { text: 'GitHub', url: 'https://github.com/sairamkiran9/atomic-habits-agent', isPrimary: false },
-        { text: 'Live Demo', url: 'https://atomic-habits-agent.vercel.app', isPrimary: true },
-      ],
-    },
-    {
       id: 'helpdesk-ai',
       title: 'Helpdesk AI System',
       subtitle: 'Intelligent IT Support Automation',
       category: 'ML/AI',
       status: 'production',
       statusLabel: 'Production Ready',
-      description: 'AI-powered help desk system that classifies queries and generates contextual responses using LLMs with smart escalation.',
+      description: 'AI-powered help desk system that classifies queries and generates contextual responses using LLMs with smart escalation. Built from scratch without using sophisticated frameworks',
       metrics: [
         { value: '75%', label: 'Accuracy' },
         { value: '<3s', label: 'Response Time' },
@@ -356,7 +356,7 @@ const RESUME_DATA = {
         'Multi-provider LLM integration',
         'Context-aware escalation',
       ],
-      technologies: ['FastAPI', 'ChromaDB', 'Groq API', 'Docker'],
+      technologies: ['FastAPI', 'ChromaDB', 'Groq API', 'Docker', 'Python'],
       links: [
         { text: 'GitHub', url: 'https://github.com/sairamkiran9/helpdesk_ai_system', isPrimary: true },
       ],
@@ -423,7 +423,7 @@ const SKILL_CATEGORIES = [
   {
     title: "AI & Machine Learning",
     icon: Brain,
-    skills: ["PyTorch", "LangChain", "LangGraph", "LlamaIndex", "AWS SageMaker", "Vector Databases", "RAG", "Hugging Face"]
+    skills: ["PyTorch", "LangChain", "LangGraph", "LlamaIndex", "AWS SageMaker", "RAG", "Hugging Face"]
   },
   {
     title: "Cloud & Infrastructure",
@@ -452,7 +452,7 @@ const SkillRadarChart = ({ isDark }: { isDark: boolean }) => {
     { name: "Data Eng", value: 85 },
     { name: "Frontend", value: 65 },
   ];
-  
+
   const colors = {
     grid: isDark ? "#262626" : "#e2e8f0",
     label: isDark ? "fill-stone-400" : "fill-slate-500",
@@ -532,8 +532,8 @@ export default function Portfolio() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const filteredProjects = activeTab === 'All' 
-    ? RESUME_DATA.projects 
+  const filteredProjects = activeTab === 'All'
+    ? RESUME_DATA.projects
     : RESUME_DATA.projects.filter(p => p.category === activeTab);
 
   // --- THEME ENGINE ---
@@ -566,7 +566,7 @@ export default function Portfolio() {
 
   return (
     <div className={`min-h-screen font-sans transition-colors duration-500 ${theme.bg} ${theme.text} ${theme.selection}`}>
-      
+
       {/* NAVIGATION */}
       <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b ${scrolled ? `${theme.navBg} backdrop-blur-md ${theme.border} py-3` : 'bg-transparent border-transparent py-5'}`}>
         <div className="max-w-6xl mx-auto px-4 md:px-6 flex justify-between items-center">
@@ -575,7 +575,7 @@ export default function Portfolio() {
               <div className={`w-2 h-2 rounded-sm transition-colors ${theme.accentBg}`}></div>
               <span className={`transition-colors uppercase ${theme.accentTextHover}`}>Kiran Muppana</span>
             </div>
-            <button 
+            <button
               onClick={() => setIsDark(!isDark)}
               className={`flex items-center gap-2 px-2 py-1 rounded-full border transition-all duration-300 ${isDark ? 'bg-neutral-900 border-neutral-800 text-neutral-400 hover:text-orange-400' : 'bg-slate-100 border-slate-200 text-slate-500 hover:text-cyan-600'}`}
               aria-label="Toggle Theme"
@@ -628,7 +628,7 @@ export default function Portfolio() {
               <h1 className={`text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1] md:leading-[0.95] ${theme.heading}`}>
                 Software Engineer. <br />
                 <span className={`${isDark ? 'text-neutral-600' : 'text-slate-400'}`}>
-                  <EncryptedText 
+                  <EncryptedText
                     text="AI/ML Backend"
                     encryptedClassName="text-neutral-500"
                     revealedClassName={isDark ? 'text-neutral-600' : 'text-slate-400'}
@@ -641,17 +641,17 @@ export default function Portfolio() {
                   "Not from a top-tier university. Not from FAANG."
                 </p>
                 <p className={`text-base md:text-lg leading-relaxed max-w-xl ${isDark ? 'text-neutral-400' : 'text-slate-500'}`}>
-                  I trust in <span className={`${theme.accentText} font-bold`}>skills</span>, <span className={`${theme.accentText} font-bold`}>consistency</span>, and the relentless pursuit of mastery. 
+                  I trust in <span className={`${theme.accentText} font-bold`}>skills</span>, <span className={`${theme.accentText} font-bold`}>consistency</span>.
                   Like water, I adapt and flow through complex engineering challenges.
                 </p>
               </div>
             </div>
             <p className={`text-sm md:text-base max-w-lg leading-relaxed ${isDark ? 'text-stone-400/80' : 'text-slate-500'}`}>
-              Specialized in building high-throughput backend services (Go/Java) and integrating practical Machine Learning workflows (AWS/Python).
+              Specialized in building high-throughput backend services (Go/Python) and integrating practical Machine Learning workflows (AWS/LangGraph).
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <a href="#work" className={`group flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-sm transition-all shadow-lg ${theme.primaryBtn}`}>
-                See Selected Work <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform"/>
+                See Selected Work <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
               <a href="mailto:kiranmuppana36@gmail.com" className={`text-sm font-bold border px-6 py-3 rounded-sm transition-colors ${theme.subHeading} ${theme.borderStrong} ${theme.accentBorderHover} ${theme.accentTextHover}`}>
                 Let's Talk
@@ -669,9 +669,9 @@ export default function Portfolio() {
             <h2 className={`text-2xl font-medium mb-2 flex items-center gap-2 ${theme.heading}`}>
               Technical Arsenal <span className={`${theme.muted} text-sm font-mono align-middle`}>01</span>
             </h2>
-            <p className={`${theme.muted} text-sm max-w-md leading-relaxed`}>
+            {/* <p className={`${theme.muted} text-sm max-w-md leading-relaxed`}>
               A robust stack built for scalability, performance, and intelligent automation.
-            </p>
+            </p> */}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {SKILL_CATEGORIES.map((cat, idx) => (
@@ -707,12 +707,12 @@ export default function Portfolio() {
         <section id="work" className={`border-t pt-24 ${theme.border}`}>
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
-               <h2 className={`text-2xl font-medium mb-2 flex items-center gap-2 ${theme.heading}`}>
-                 Selected Works <span className={`${theme.muted} text-sm font-mono align-middle`}>02</span>
-               </h2>
-               <p className={`${theme.muted} text-sm max-w-md leading-relaxed`}>
-                 High-impact systems, from ML recommendation engines to distributed backend services.
-               </p>
+              <h2 className={`text-2xl font-medium mb-2 flex items-center gap-2 ${theme.heading}`}>
+                Selected Works <span className={`${theme.muted} text-sm font-mono align-middle`}>02</span>
+              </h2>
+              <p className={`${theme.muted} text-sm max-w-md leading-relaxed`}>
+                High-impact systems, from ML recommendation engines to distributed backend services.
+              </p>
             </div>
             {/* <div className={`flex flex-wrap gap-1 p-1 rounded-sm border ${isDark ? 'bg-neutral-900/50 border-neutral-800' : 'bg-slate-100 border-slate-200'}`}>
               {['All', 'ML/AI', 'Backend', 'DevOps'].map((cat) => (
@@ -797,14 +797,13 @@ export default function Portfolio() {
 
                     <div className="flex gap-3">
                       {project.links.map((link, idx) => (
-                        <a 
+                        <a
                           key={idx}
                           href={link.url}
-                          className={`flex items-center gap-2 text-sm font-bold px-5 py-2.5 rounded-sm transition-all ${
-                            link.isPrimary 
-                              ? theme.primaryBtn 
+                          className={`flex items-center gap-2 text-sm font-bold px-5 py-2.5 rounded-sm transition-all ${link.isPrimary
+                              ? theme.primaryBtn
                               : `border ${theme.borderStrong} ${theme.subHeading} hover:${theme.accentBorder} hover:${theme.accentText}`
-                          }`}
+                            }`}
                         >
                           {link.text}
                           {link.isPrimary ? <ArrowUpRight size={14} /> : <ExternalLink size={14} />}
@@ -823,7 +822,7 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-12 gap-12">
             <div className="md:col-span-4">
               <h2 className={`text-2xl font-medium mb-4 flex items-center gap-2 ${theme.heading}`}>
-                 Experience <span className={`${theme.muted} text-sm font-mono align-middle`}>03</span>
+                Experience <span className={`${theme.muted} text-sm font-mono align-middle`}>03</span>
               </h2>
               <p className={`${theme.muted} text-sm leading-relaxed mb-8`}>
                 Solving scalability problems and optimizing critical paths in production environments.
@@ -860,27 +859,27 @@ export default function Portfolio() {
         <section id="contact" className={`border-t pt-16 ${theme.border}`}>
           <div className={`border p-8 md:p-12 rounded-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-8 ${isDark ? 'bg-neutral-900/20 border-neutral-800/50' : 'bg-cyan-50/50 border-cyan-100'}`}>
             <div>
-               <h2 className={`text-3xl font-bold mb-2 ${theme.heading}`}>Ready to Collaborate?</h2>
-               <p className={`${theme.muted} text-sm max-w-md`}>
-                 Open for opportunities in Backend Engineering and ML Infrastructure. Let's build something scalable.
-               </p>
+              <h2 className={`text-3xl font-bold mb-2 ${theme.heading}`}>Ready to Collaborate?</h2>
+              <p className={`${theme.muted} text-sm max-w-md`}>
+                Open for opportunities in Backend Engineering and ML Infrastructure. Let's build something scalable.
+              </p>
             </div>
-             <div className="flex items-center gap-4">
-               <a href={`mailto:${RESUME_DATA.contact.email}`} className={`flex items-center gap-2 text-sm font-bold text-white px-6 py-3 rounded-sm transition-colors shadow-lg ${theme.accentBg} ${theme.accentBgHover}`}>
-                 <Mail size={16} /> Send Email
-               </a>
-               <a href={RESUME_DATA.contact.github} className={`p-3 border rounded-sm transition-colors ${theme.accentBorderHover} ${theme.accentTextHover} ${isDark ? 'bg-neutral-900 text-neutral-400 border-neutral-800' : 'bg-white text-slate-500 border-slate-200'}`}>
-                 <Github size={20} />
-               </a>
-               <a href={RESUME_DATA.contact.linkedin} className={`p-3 border rounded-sm transition-colors ${theme.accentBorderHover} ${theme.accentTextHover} ${isDark ? 'bg-neutral-900 text-neutral-400 border-neutral-800' : 'bg-white text-slate-500 border-slate-200'}`}>
-                 <Linkedin size={20} />
-               </a>
-             </div>
+            <div className="flex items-center gap-4">
+              <a href={`mailto:${RESUME_DATA.contact.email}`} className={`flex items-center gap-2 text-sm font-bold text-white px-6 py-3 rounded-sm transition-colors shadow-lg ${theme.accentBg} ${theme.accentBgHover}`}>
+                <Mail size={16} /> Send Email
+              </a>
+              <a href={RESUME_DATA.contact.github} className={`p-3 border rounded-sm transition-colors ${theme.accentBorderHover} ${theme.accentTextHover} ${isDark ? 'bg-neutral-900 text-neutral-400 border-neutral-800' : 'bg-white text-slate-500 border-slate-200'}`}>
+                <Github size={20} />
+              </a>
+              <a href={RESUME_DATA.contact.linkedin} className={`p-3 border rounded-sm transition-colors ${theme.accentBorderHover} ${theme.accentTextHover} ${isDark ? 'bg-neutral-900 text-neutral-400 border-neutral-800' : 'bg-white text-slate-500 border-slate-200'}`}>
+                <Linkedin size={20} />
+              </a>
+            </div>
           </div>
           <div className={`mt-16 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-mono uppercase tracking-widest ${theme.border} ${theme.muted}`}>
             <span>© {new Date().getFullYear()} Kiran Muppana</span>
             <span className="flex items-center gap-2">
-              <Code2 size={12}/> Built with React & Tailwind
+              <Code2 size={12} /> Built with React & Tailwind
             </span>
           </div>
         </section>
