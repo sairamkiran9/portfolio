@@ -297,7 +297,7 @@ const RESUME_DATA = {
       description: 'End to end knowledge retrieval platform with automated crawling, entity extraction, vector indexing, and an integrated RAG chat assistant. Supports large scale ingestion and real time semantic search.',
       metrics: [
         { value: '$550K', label: 'NSF Funding' },
-        { value: '50M plus Records', label: 'Dataset Size' },
+        { value: '50M+ ', label: 'Records' },
         { value: 'Published', label: 'Research Paper' },
       ],
       features: [
@@ -477,7 +477,16 @@ const SkillRadarChart = ({ isDark }: { isDark: boolean }) => {
   }).join(" ");
 
   return (
-    <div className={`relative flex flex-col items-center justify-center p-6 rounded-sm backdrop-blur-sm border transition-colors duration-500 w-full max-w-[300px] h-auto aspect-square mx-auto lg:mx-0 ${colors.bg}`}>
+    <div className={`relative flex flex-col items-center justify-center p-2 rounded-2xl border transition-colors duration-500 w-full max-w-[300px] h-auto aspect-square mx-auto lg:mx-0 ${isDark ? 'border-neutral-800' : 'border-slate-300'}`}>
+      <GlowingEffect
+        spread={40}
+        glow={true}
+        disabled={false}
+        proximity={64}
+        inactiveZone={0.01}
+        themeColor={isDark ? '#f97316' : '#0891b2'}
+      />
+      <div className={`relative flex flex-col items-center justify-center p-6 rounded-xl backdrop-blur-sm transition-colors duration-500 w-full h-full ${colors.bg}`}>
       <div className={`absolute top-4 right-4 text-[10px] font-mono uppercase tracking-widest animate-pulse ${colors.liveText}`}>
         Fast Learner | Team Player
       </div>
@@ -513,8 +522,9 @@ const SkillRadarChart = ({ isDark }: { isDark: boolean }) => {
           );
         })}
       </svg>
-      <div className={`mt-4 text-xs font-mono transition-colors ${isDark ? 'text-neutral-500' : 'text-slate-400'}`}>
-        Skill Proficiency Distribution
+        <div className={`mt-4 text-xs font-mono transition-colors ${isDark ? 'text-neutral-500' : 'text-slate-400'}`}>
+          Skill Proficiency Distribution
+        </div>
       </div>
     </div>
   );
@@ -568,7 +578,7 @@ export default function Portfolio() {
     <div className={`min-h-screen font-sans transition-colors duration-500 ${theme.bg} ${theme.text} ${theme.selection}`}>
 
       {/* NAVIGATION */}
-      <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b ${scrolled ? `${theme.navBg} backdrop-blur-md ${theme.border} py-3` : 'bg-transparent border-transparent py-5'}`}>
+      <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b ${scrolled ? `${theme.navBg} backdrop-blur-md ${theme.border} py-2 md:py-3` : 'bg-transparent border-transparent py-3 md:py-5'}`}>
         <div className="max-w-6xl mx-auto px-4 md:px-6 flex justify-between items-center">
           <div className="flex items-center gap-6">
             <div className={`text-sm font-bold tracking-tight flex items-center gap-2 group cursor-pointer ${theme.heading}`}>
@@ -612,7 +622,7 @@ export default function Portfolio() {
         )}
       </nav>
 
-      <main className="max-w-6xl mx-auto px-4 md:px-6 pt-32 pb-24 space-y-24 md:space-y-32">
+      <main className="max-w-6xl mx-auto px-4 md:px-6 pt-20 md:pt-32 pb-16 md:pb-24 space-y-16 md:space-y-24 lg:space-y-32">
 
         {/* HERO SECTION */}
         <section id="about" className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
