@@ -6,11 +6,8 @@ import {
   Mail,
   ArrowUpRight,
   Download,
-  Terminal,
   Code2,
-  Server,
   Cloud,
-  Zap,
   Menu,
   X,
   Database,
@@ -19,11 +16,9 @@ import {
   Sun,
   Moon,
   ExternalLink,
-  Box,
-  Lock,
-  Search,
-  Settings,
-  Sparkles
+  MessageCircle,
+  Target,
+  Lightbulb
 } from 'lucide-react';
 
 /** * UTILS 
@@ -433,7 +428,31 @@ const SKILL_CATEGORIES = [
   {
     title: "Data & Distributed Systems",
     icon: Database,
-    skills: ["Apache Kafka", "Spark / PySpark", "PostgreSQL", "Redis", "MongoDB", "gRPC", "Supabase"]
+    skills: ["Apache Kafka", "AWS Glue", "PostgreSQL", "Redis", "MongoDB", "gRPC", "Goroutines"]
+  }
+];
+
+// FAQ / Learn More Data
+const FAQ_DATA = [
+  {
+    question: "Why am I looking for a new opportunity right now?",
+    answer: "I have built complete systems at FSU including a monitoring dashboard, CI CD pipelines and AI analytics. I am now ready for an environment where I can work on larger scale distributed systems and collaborate with strong engineers. I want to grow in a culture that values good architecture, clear standards and technical excellence.",
+    icon: Target
+  },
+  {
+    question: "What is the work you are most proud of?",
+    answer: "My work on the Knowledge Graph search engine is the project I value the most. It pushed me to design a new dynamic clustering approach using MongoDB HNSW indexing and vector similarity search on unstructured tabular data. This design helped secure five hundred thousand dollars in funding and confirmed the strength and potential of the architecture.",
+    icon: Lightbulb
+  },
+  {
+    question: "How do I approach a completely new technology stack?",
+    answer: "I begin with the core design. I study the patterns, limits and strengths, then create a quick proof of concept. This is how I approached the Whiteboard AI work. Moving from Python to Go for gRPC or learning LangGraph for orchestration followed the same path. I rely on documentation, prototypes and fast learning by doing. I enjoy the process and it keeps me motivated.",
+    icon: Brain
+  },
+  {
+    question: "Brief summary and ultimate goal",
+    answer: "I work in the utilities division, building a software suite that connects IoT devices with field engineers. I manage real time sensor streams, run fault checks and maintain an automatic work order system. When I joined, the work focused mostly on data tasks. Today the system functions as an AI insights and automation platform that saves significant time for every user. Along the way I have built frontend TypeScript dashboards, backend services and full CI/CD with observability. FSU has given me broad experience and the confidence to tackle larger systems. I'm now looking for a place where I can apply these skills, solve harder problems and grow into an engineering leader.",
+    icon: MessageCircle
   }
 ];
 
@@ -487,41 +506,41 @@ const SkillRadarChart = ({ isDark }: { isDark: boolean }) => {
         themeColor={isDark ? '#f97316' : '#0891b2'}
       />
       <div className={`relative flex flex-col items-center justify-center p-6 rounded-xl backdrop-blur-sm transition-colors duration-500 w-full h-full ${colors.bg}`}>
-      <div className={`absolute top-4 right-4 text-[10px] font-mono uppercase tracking-widest animate-pulse ${colors.liveText}`}>
-        Fast Learner | Team Player
-      </div>
-      <svg viewBox={`0 0 ${size} ${size}`} className="overflow-visible w-full h-full">
-        {[20, 40, 60, 80, 100].map((level, idx) => (
-          <polygon
-            key={idx}
-            points={skills.map((_, i) => {
-              const { x, y } = getPoint(level, i, totalSkills);
-              return `${x},${y}`;
-            }).join(" ")}
-            fill="none"
-            stroke={colors.grid}
-            strokeWidth="1"
-            className="transition-all duration-1000"
-          />
-        ))}
-        {skills.map((_, i) => {
-          const { x, y } = getPoint(100, i, totalSkills);
-          return <line key={i} x1={center} y1={center} x2={x} y2={y} stroke={colors.grid} strokeWidth="1" />;
-        })}
-        <polygon points={polyPoints} fill={colors.fill} stroke={colors.stroke} strokeWidth="2" className="drop-shadow-md transition-all duration-500" />
-        {skills.map((s, i) => {
-          const { x, y } = getPoint(s.value, i, totalSkills);
-          return <circle key={i} cx={x} cy={y} r="3" fill={colors.dot} className="hover:r-4 transition-all duration-300" />;
-        })}
-        {skills.map((s, i) => {
-          const { x, y } = getPoint(115, i, totalSkills);
-          return (
-            <text key={i} x={x} y={y} textAnchor="middle" dominantBaseline="middle" className={`text-[10px] font-mono uppercase tracking-wider transition-colors duration-500 ${colors.label}`}>
-              {s.name}
-            </text>
-          );
-        })}
-      </svg>
+        <div className={`absolute top-4 right-4 text-[10px] font-mono uppercase tracking-widest animate-pulse ${colors.liveText}`}>
+          Fast Learner | Team Player
+        </div>
+        <svg viewBox={`0 0 ${size} ${size}`} className="overflow-visible w-full h-full">
+          {[20, 40, 60, 80, 100].map((level, idx) => (
+            <polygon
+              key={idx}
+              points={skills.map((_, i) => {
+                const { x, y } = getPoint(level, i, totalSkills);
+                return `${x},${y}`;
+              }).join(" ")}
+              fill="none"
+              stroke={colors.grid}
+              strokeWidth="1"
+              className="transition-all duration-1000"
+            />
+          ))}
+          {skills.map((_, i) => {
+            const { x, y } = getPoint(100, i, totalSkills);
+            return <line key={i} x1={center} y1={center} x2={x} y2={y} stroke={colors.grid} strokeWidth="1" />;
+          })}
+          <polygon points={polyPoints} fill={colors.fill} stroke={colors.stroke} strokeWidth="2" className="drop-shadow-md transition-all duration-500" />
+          {skills.map((s, i) => {
+            const { x, y } = getPoint(s.value, i, totalSkills);
+            return <circle key={i} cx={x} cy={y} r="3" fill={colors.dot} className="hover:r-4 transition-all duration-300" />;
+          })}
+          {skills.map((s, i) => {
+            const { x, y } = getPoint(115, i, totalSkills);
+            return (
+              <text key={i} x={x} y={y} textAnchor="middle" dominantBaseline="middle" className={`text-[10px] font-mono uppercase tracking-wider transition-colors duration-500 ${colors.label}`}>
+                {s.name}
+              </text>
+            );
+          })}
+        </svg>
         <div className={`mt-4 text-xs font-mono transition-colors ${isDark ? 'text-neutral-500' : 'text-slate-400'}`}>
           Skill Proficiency Distribution
         </div>
@@ -601,6 +620,7 @@ export default function Portfolio() {
             <a href="#skills" className={`transition-colors ${theme.accentTextHover}`}>Skills</a>
             <a href="#work" className={`transition-colors ${theme.accentTextHover}`}>Work</a>
             <a href="#experience" className={`transition-colors ${theme.accentTextHover}`}>Experience</a>
+            <a href="#faq" className={`transition-colors ${theme.accentTextHover}`}>More</a>
             <a href="#contact" className={`transition-colors ${theme.accentTextHover}`}>Contact</a>
             <a href="/resume.pdf" download="Kiran_Muppana_Resume.pdf" className={`flex items-center gap-2 border px-4 py-1.5 rounded-sm transition-colors ${theme.accentBorderHover} ${isDark ? 'bg-neutral-900/50 border-neutral-800 text-stone-300' : 'bg-white border-slate-200 text-slate-600'}`}>
               Resume <Download size={12} />
@@ -616,6 +636,7 @@ export default function Portfolio() {
             <a href="#skills" onClick={() => setMobileMenuOpen(false)}>Skills</a>
             <a href="#work" onClick={() => setMobileMenuOpen(false)}>Work</a>
             <a href="#experience" onClick={() => setMobileMenuOpen(false)}>Experience</a>
+            <a href="#faq" onClick={() => setMobileMenuOpen(false)}>More</a>
             <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
             <a href="/resume.pdf" download="Kiran_Muppana_Resume.pdf" className={theme.accentText}>Download Resume</a>
           </div>
@@ -648,23 +669,23 @@ export default function Portfolio() {
               </h1>
               <div className={`relative border-l-2 pl-6 md:pl-8 py-2 ${theme.accentBorder}`}>
                 <p className={`text-xl md:text-2xl font-medium italic mb-4 ${theme.subHeading}`}>
-                  "Not from a top-tier university. Not from FAANG."
+                  "I leverage distributed systems for better performance and user experience"
                 </p>
+                {/* <span className={`${theme.accentText} font-bold`}></span> */}
                 <p className={`text-base md:text-lg leading-relaxed max-w-xl ${isDark ? 'text-neutral-400' : 'text-slate-500'}`}>
-                  I trust in <span className={`${theme.accentText} font-bold`}>skills</span>, <span className={`${theme.accentText} font-bold`}>consistency</span>.
-                  Like water, I adapt and flow through complex engineering challenges.
+                  Expertised in building the microservices that makes model inference reliable at scale. <span className={`${theme.accentText} font-bold`}>My focus is taking applications from 0-to-1</span>, transforming high-volume events into production-ready data and architecting resilient APIs that serve high TPS seemlessly under load.
                 </p>
               </div>
             </div>
-            <p className={`text-sm md:text-base max-w-lg leading-relaxed ${isDark ? 'text-stone-400/80' : 'text-slate-500'}`}>
+            {/* <p className={`text-sm md:text-base max-w-lg leading-relaxed ${isDark ? 'text-stone-400/80' : 'text-slate-500'}`}>
               Specialized in building high-throughput backend services (Go/Python) and integrating practical Machine Learning workflows (AWS/LangGraph).
-            </p>
+            </p> */}
             <div className="flex flex-wrap gap-4 pt-2">
               <a href="#work" className={`group flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-sm transition-all shadow-lg ${theme.primaryBtn}`}>
                 See Selected Work <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="mailto:kiranmuppana36@gmail.com" className={`text-sm font-bold border px-6 py-3 rounded-sm transition-colors ${theme.subHeading} ${theme.borderStrong} ${theme.accentBorderHover} ${theme.accentTextHover}`}>
-                Let's Talk
+              <a href="#faq" className={`text-sm font-bold border px-6 py-3 rounded-sm transition-colors ${theme.subHeading} ${theme.borderStrong} ${theme.accentBorderHover} ${theme.accentTextHover}`}>
+                Why should I hire you?
               </a>
             </div>
           </div>
@@ -811,8 +832,8 @@ export default function Portfolio() {
                           key={idx}
                           href={link.url}
                           className={`flex items-center gap-2 text-sm font-bold px-5 py-2.5 rounded-sm transition-all ${link.isPrimary
-                              ? theme.primaryBtn
-                              : `border ${theme.borderStrong} ${theme.subHeading} hover:${theme.accentBorder} hover:${theme.accentText}`
+                            ? theme.primaryBtn
+                            : `border ${theme.borderStrong} ${theme.subHeading} hover:${theme.accentBorder} hover:${theme.accentText}`
                             }`}
                         >
                           {link.text}
@@ -862,6 +883,43 @@ export default function Portfolio() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* FAQ / PHILOSOPHY SECTION */}
+        <section id="faq" className={`border-t pt-24 ${theme.border}`}>
+          <div className="mb-12">
+            <h2 className={`text-2xl font-medium mb-2 flex items-center gap-2 ${theme.heading}`}>
+              Why should I Hire you? <span className={`${theme.muted} text-sm font-mono align-middle`}>04</span>
+            </h2>
+            <p className={`${theme.muted} text-sm max-w-md leading-relaxed`}>
+              How I think, how I work, and what I value in engineering culture.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {FAQ_DATA.map((item, idx) => (
+              <div key={idx} className={`relative rounded-2xl border p-2 ${theme.borderStrong}`}>
+                <GlowingEffect
+                  spread={40}
+                  glow={true}
+                  disabled={false}
+                  proximity={64}
+                  inactiveZone={0.01}
+                  themeColor={theme.themeColor}
+                />
+                <div className={`relative h-full flex flex-col justify-start rounded-xl p-6 transition-colors ${isDark ? 'bg-neutral-900/50' : 'bg-white/80'}`}>
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className={`p-2 rounded-md ${isDark ? 'bg-neutral-800' : 'bg-slate-100'} ${theme.accentText}`}>
+                      <item.icon size={20} />
+                    </div>
+                    <h3 className={`text-lg font-bold leading-tight ${theme.subHeading}`}>{item.question}</h3>
+                  </div>
+                  <p className={`text-sm leading-relaxed ${isDark ? 'text-stone-400' : 'text-slate-600'}`}>
+                    {item.answer}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
